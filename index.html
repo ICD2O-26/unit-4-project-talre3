@@ -1,127 +1,473 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>3D Printing | The Future of Industry</title>
-    <style>
-        body {
-            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            max-width: 800px;
-            margin: auto;
-            padding: 20px;
-            background-color: #f4f4f9;
-        }
-        header {
-            background: #2c3e50;
-            color: white;
-            padding: 2rem;
-            text-align: center;
-            border-radius: 10px;
-        }
-        h2 {
-            color: #2980b9;
-            border-bottom: 2px solid #2980b9;
-            padding-bottom: 5px;
-            margin-top: 30px;
-        }
-        .impact-card {
-            background: white;
-            padding: 15px;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            margin-bottom: 10px;
-        }
-        img {
-            display: block;
-            margin: 20px auto;
-            border-radius: 15px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-            max-width: 100%;
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            background: white;
-        }
-        th, td {
-            padding: 12px;
-            border: 1px solid #ddd;
-            text-align: left;
-        }
-        th {
-            background-color: #2980b9;
-            color: white;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>3D Printing Technology Report</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #f4f7fb;
+      color: #222;
+      line-height: 1.8;
+    }
+
+    header {
+      background: linear-gradient(135deg, #0f172a, #2563eb);
+      color: white;
+      text-align: center;
+      padding: 80px 20px;
+    }
+
+    header h1 {
+      font-size: 4rem;
+      font-weight: 700;
+      margin-bottom: 15px;
+      letter-spacing: 2px;
+    }
+
+    header p {
+      font-size: 1.3rem;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    nav {
+      background: #111827;
+      padding: 15px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #60a5fa;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: auto;
+      padding: 50px 0;
+    }
+
+    section {
+      background: white;
+      margin-bottom: 40px;
+      padding: 40px;
+      border-radius: 18px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+      animation: fadeIn 1s ease;
+    }
+
+    h2 {
+      font-size: 2.5rem;
+      color: #1d4ed8;
+      margin-bottom: 20px;
+      font-family: 'Merriweather', serif;
+    }
+
+    h3 {
+      font-size: 1.6rem;
+      color: #0f766e;
+      margin-top: 25px;
+      margin-bottom: 10px;
+    }
+
+    h4 {
+      font-size: 1.2rem;
+      color: #7c3aed;
+      margin-top: 15px;
+      margin-bottom: 10px;
+    }
+
+    p {
+      margin-bottom: 15px;
+      font-size: 1.05rem;
+    }
+
+    ul {
+      margin-left: 25px;
+      margin-bottom: 20px;
+    }
+
+    li {
+      margin-bottom: 10px;
+    }
+
+    .highlight {
+      color: #dc2626;
+      font-weight: bold;
+    }
+
+    .hero-image,
+    .section-image {
+      width: 100%;
+      border-radius: 15px;
+      margin: 25px 0;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .card {
+      background: linear-gradient(135deg, #dbeafe, #eff6ff);
+      padding: 25px;
+      border-radius: 15px;
+      transition: transform 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+
+    table, th, td {
+      border: 1px solid #cbd5e1;
+    }
+
+    th {
+      background: #2563eb;
+      color: white;
+      padding: 15px;
+    }
+
+    td {
+      padding: 15px;
+      background: #f8fafc;
+    }
+
+    footer {
+      background: #0f172a;
+      color: white;
+      text-align: center;
+      padding: 30px;
+      margin-top: 50px;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media(max-width: 768px) {
+      header h1 {
+        font-size: 2.5rem;
+      }
+
+      h2 {
+        font-size: 2rem;
+      }
+
+      section {
+        padding: 25px;
+      }
+    }
+  </style>
 </head>
 <body>
 
-    <header>
-        <h1>Emerging Tech: 3D Printing</h1>
-        <p>By Tuka - ICD2O Unit 4 Project</p>
-    </header>
+<header>
+  <h1>3D Printing Technology</h1>
+  <p>A Complete Interactive Report on Additive Manufacturing, Its Uses, Impacts, Industries, and Future Innovations</p>
+</header>
 
-    <section id="intro">
-        <h2>What is 3D Printing?</h2>
-        <p>3D Printing, formally known as <strong>Additive Manufacturing</strong>, is the process of creating three-dimensional objects from a digital CAD (Computer-Aided Design) model. Unlike traditional "subtractive" manufacturing—which carves an object out of a block of wood or metal—3D printing builds the object <em>layer by layer</em>.</p>
-        
-        <img src="https://www.popsci.com/wp-content/uploads/2023/10/27/how-does-a-3d-printer-work.jpg" alt="A sophisticated 3D printed structure">
+<nav>
+  <ul>
+    <li><a href="#intro">Introduction</a></li>
+    <li><a href="#what">What is 3D Printing?</a></li>
+    <li><a href="#problems">Problems Solved</a></li>
+    <li><a href="#how">How It Works</a></li>
+    <li><a href="#types">Types</a></li>
+    <li><a href="#industries">Industries</a></li>
+    <li><a href="#impacts">Impacts</a></li>
+    <li><a href="#future">Future</a></li>
+  </ul>
+</nav>
 
-        <h3>How It Works</h3>
-        <ul>
-            <li><strong>Modeling:</strong> A 3D blue-print is created using software.</li>
-            <li><strong>Slicing:</strong> The computer cuts the model into hundreds of horizontal layers.</li>
-            <li><strong>Printing:</strong> The printer nozzle moves precisely, depositing material (plastic, metal, or even cells) to form the layers.</li>
-        </ul>
-    </section>
+<div class="container">
 
-    <section id="applications">
-        <h2>Real-World Applications</h2>
-        <div class="impact-card">
-            <strong>Healthcare:</strong> Surgeons use 3D-printed organs to practice complex operations, and "bioprinting" is being used to grow skin for burn victims.
-        </div>
-        <div class="impact-card">
-            <strong>Aerospace:</strong> NASA uses 3D printers on the Space Station to print tools they need instantly, rather than waiting for a supply rocket.
-        </div>
-    </section>
+<section id="intro">
+  <h2>Introduction</h2>
+  <img class="hero-image" src="https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?q=80&w=1400&auto=format&fit=crop" alt="3D Printer">
+  <p>
+    <span class="highlight">3D printing</span>, also known as additive manufacturing, is one of the most revolutionary technologies in modern engineering and manufacturing. It creates physical objects from digital designs by building them layer by layer.
+  </p>
+  <p>
+    Today, 3D printing is used in healthcare, aerospace, automotive industries, education, architecture, fashion, and even space exploration.
+  </p>
+</section>
 
-    <section id="impacts">
-        <h2>Social & Ethical Impacts</h2>
-        <table>
-            <tr>
-                <th>Category</th>
-                <th>Impact Description</th>
-            </tr>
-            <tr>
-                <td><strong>Environmental</strong></td>
-                <td>Reduces waste by using only necessary material and lowers CO2 by enabling local production.</td>
-            </tr>
-            <tr>
-                <td><strong>Ethical</strong></td>
-                <td>Questions arise regarding the printing of unregulated items (weapons) or the "patenting" of 3D-printed human organs.</td>
-            </tr>
-            <tr>
-                <td><strong>Economic</strong></td>
-                <td>Allows small businesses to manufacture products at home, disrupting traditional global supply chains.</td>
-            </tr>
-        </table>
-    </section>
+<section id="what">
+  <h2>What Is 3D Printing?</h2>
+  <p>
+    3D printing is a manufacturing process where digital designs are turned into physical objects using specialized printers.
+  </p>
 
-    <section id="more-info">
-        <h2>Learn More</h2>
-        <p>To see how 3D printing is changing the world, check out the <a href="https://www.autodesk.com/solutions/3d-printing" target="_blank">Autodesk Guide to Manufacturing</a>.</p>
-        
-        <details>
-            <summary><strong>Level 4 Technical Insight (Click to Expand)</strong></summary>
-            <p>This webpage uses <strong>internal CSS</strong> within the <code>&lt;style&gt;</code> tag to manage layout and the <code>&lt;details&gt;</code> tag for interactive user elements.</p>
-        </details>
-    </section>
+  <div class="grid">
+    <div class="card">
+      <h3>Digital Design</h3>
+      <p>Objects are first created using CAD software.</p>
+    </div>
 
-    <hr>
-    <footer>
-        <p align="center">Submitted May 2026 | OCDSB GitHub Classroom</p>
-    </footer>
+    <div class="card">
+      <h3>Layer-by-Layer</h3>
+      <p>The printer builds the object one thin layer at a time.</p>
+    </div>
+
+    <div class="card">
+      <h3>Materials</h3>
+      <p>Plastic, resin, metal, concrete, food, and even living cells can be used.</p>
+    </div>
+  </div>
+
+  <img class="section-image" src="https://images.unsplash.com/photo-1565043666747-69f6646db940?q=80&w=1400&auto=format&fit=crop" alt="3D Printed Object">
+</section>
+
+<section id="problems">
+  <h2>What Problems Does It Solve?</h2>
+
+  <h3>1. Faster Manufacturing</h3>
+  <p>Products and prototypes can be made in hours instead of weeks.</p>
+
+  <h3>2. Customization</h3>
+  <p>Each product can be personalized without changing an entire production line.</p>
+
+  <h3>3. Reduced Waste</h3>
+  <p>Only the required material is used, reducing waste.</p>
+
+  <h3>4. Complex Designs</h3>
+  <p>3D printers can create shapes impossible for traditional manufacturing.</p>
+
+  <h3>5. Local Manufacturing</h3>
+  <p>Objects can be printed close to where they are needed.</p>
+</section>
+
+<section id="how">
+  <h2>How Does 3D Printing Work?</h2>
+
+  <img class="section-image" src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?q=80&w=1400&auto=format&fit=crop" alt="Technology Design">
+
+  <h3>Step 1: Design</h3>
+  <p>A 3D model is created using CAD software.</p>
+
+  <h3>Step 2: Slicing</h3>
+  <p>The model is sliced into hundreds of thin layers.</p>
+
+  <h3>Step 3: Printing</h3>
+  <p>The printer deposits or hardens material layer by layer.</p>
+
+  <h3>Step 4: Post-Processing</h3>
+  <p>The object may be cleaned, polished, painted, or cured.</p>
+</section>
+
+<section id="types">
+  <h2>Types of 3D Printing</h2>
+
+  <div class="grid">
+    <div class="card">
+      <h3>FDM</h3>
+      <p>Melts plastic filament and deposits it layer by layer.</p>
+    </div>
+
+    <div class="card">
+      <h3>SLA</h3>
+      <p>Uses UV light to harden liquid resin.</p>
+    </div>
+
+    <div class="card">
+      <h3>SLS</h3>
+      <p>Uses lasers to fuse powdered materials.</p>
+    </div>
+
+    <div class="card">
+      <h3>DMLS</h3>
+      <p>Prints metal components using laser technology.</p>
+    </div>
+
+    <div class="card">
+      <h3>Bioprinting</h3>
+      <p>Uses biological materials and living cells.</p>
+    </div>
+  </div>
+</section>
+
+<section id="industries">
+  <h2>Industries and Careers Using 3D Printing</h2>
+
+  <img class="section-image" src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?q=80&w=1400&auto=format&fit=crop" alt="Engineering Industry">
+
+  <h3>Healthcare</h3>
+  <ul>
+    <li>Prosthetic limbs</li>
+    <li>Dental aligners</li>
+    <li>Medical implants</li>
+  </ul>
+
+  <h3>Aerospace</h3>
+  <ul>
+    <li>Rocket parts</li>
+    <li>Aircraft components</li>
+    <li>Lightweight structures</li>
+  </ul>
+
+  <h3>Automotive</h3>
+  <ul>
+    <li>Engine prototypes</li>
+    <li>Custom parts</li>
+    <li>Concept vehicles</li>
+  </ul>
+
+  <h3>Construction</h3>
+  <ul>
+    <li>Printed homes</li>
+    <li>Concrete structures</li>
+  </ul>
+
+  <h3>Careers</h3>
+  <p>
+    Mechanical Engineer, Biomedical Engineer, CAD Designer, Architect, Product Designer, Manufacturing Technician, and Robotics Specialist.
+  </p>
+</section>
+
+<section id="impacts">
+  <h2>Impacts of 3D Printing</h2>
+
+  <h3>Social Impacts</h3>
+  <p>Affordable prosthetics, educational tools, and local manufacturing improve quality of life.</p>
+
+  <h3>Cultural Impacts</h3>
+  <p>Artists and designers can create new forms of creative expression.</p>
+
+  <h3>Economic Impacts</h3>
+  <p>Businesses save money through rapid prototyping and reduced manufacturing costs.</p>
+
+  <h3>Environmental Impacts</h3>
+  <p>3D printing reduces material waste but may still consume large amounts of energy.</p>
+
+  <h3>Ethical Issues</h3>
+  <ul>
+    <li>Illegal printing of dangerous objects</li>
+    <li>Copyright and intellectual property concerns</li>
+    <li>Bioprinting ethics</li>
+  </ul>
+
+  <img class="section-image" src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?q=80&w=1400&auto=format&fit=crop" alt="Technology Future">
+</section>
+
+<section>
+  <h2>Advantages vs Disadvantages</h2>
+
+  <table>
+    <tr>
+      <th>Advantages</th>
+      <th>Disadvantages</th>
+    </tr>
+
+    <tr>
+      <td>Rapid prototyping</td>
+      <td>Slow mass production</td>
+    </tr>
+
+    <tr>
+      <td>Customization</td>
+      <td>Expensive industrial machines</td>
+    </tr>
+
+    <tr>
+      <td>Reduced waste</td>
+      <td>Material limitations</td>
+    </tr>
+
+    <tr>
+      <td>Complex designs</td>
+      <td>Requires technical skills</td>
+    </tr>
+  </table>
+</section>
+
+<section id="future">
+  <h2>The Future of 3D Printing</h2>
+
+  <div class="grid">
+    <div class="card">
+      <h3>Printed Organs</h3>
+      <p>Scientists hope to print functional organs for transplants.</p>
+    </div>
+
+    <div class="card">
+      <h3>Space Manufacturing</h3>
+      <p>Future astronauts may print tools and buildings on Mars.</p>
+    </div>
+
+    <div class="card">
+      <h3>Printed Homes</h3>
+      <p>Entire neighborhoods may be built with giant printers.</p>
+    </div>
+
+    <div class="card">
+      <h3>Sustainable Manufacturing</h3>
+      <p>Future systems may use recycled materials and renewable energy.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Conclusion</h2>
+  <p>
+    3D printing is transforming the world by changing how products are designed, created, and distributed. From healthcare and aerospace to education and construction, the technology has major benefits for industries and society.
+  </p>
+
+  <p>
+    Although challenges such as cost, ethics, and environmental concerns still exist, the future of 3D printing is extremely promising.
+  </p>
+</section>
+
+</div>
+
+<footer>
+  <p>3D Printing Technology Report Webpage | Created Using HTML & CSS</p>
+</footer>
 
 </body>
 </html>
