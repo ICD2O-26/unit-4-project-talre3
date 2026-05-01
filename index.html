@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>3D Printing Technology Report</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Merriweather:wght@400;700&family=Pacifico&display=swap" rel="stylesheet">
+
   <style>
     * {
       margin: 0;
@@ -125,11 +126,14 @@
       font-weight: bold;
     }
 
+    /* ✅ UPDATED IMAGE STYLE */
     .hero-image,
     .section-image {
       width: 100%;
+      max-width: 900px;
+      display: block;
+      margin: 25px auto;
       border-radius: 15px;
-      margin: 25px 0;
       box-shadow: 0 4px 12px rgba(0,0,0,0.2);
     }
 
@@ -206,6 +210,7 @@
     }
   </style>
 </head>
+
 <body>
 
 <header>
@@ -241,9 +246,7 @@
 
 <section id="what">
   <h2>What Is 3D Printing?</h2>
-  <p>
-    3D printing is a manufacturing process where digital designs are turned into physical objects using specialized printers.
-  </p>
+  <p>3D printing is a manufacturing process where digital designs are turned into physical objects using specialized printers.</p>
 
   <div class="grid">
     <div class="card">
@@ -267,21 +270,7 @@
 
 <section id="problems">
   <h2>What Problems Does It Solve?</h2>
-
-  <h3>1. Faster Manufacturing</h3>
-  <p>Products and prototypes can be made in hours instead of weeks.</p>
-
-  <h3>2. Customization</h3>
-  <p>Each product can be personalized without changing an entire production line.</p>
-
-  <h3>3. Reduced Waste</h3>
-  <p>Only the required material is used, reducing waste.</p>
-
-  <h3>4. Complex Designs</h3>
-  <p>3D printers can create shapes impossible for traditional manufacturing.</p>
-
-  <h3>5. Local Manufacturing</h3>
-  <p>Objects can be printed close to where they are needed.</p>
+  <p>3D printing solves problems like slow manufacturing, high cost, and lack of customization.</p>
 </section>
 
 <section id="how">
@@ -289,179 +278,23 @@
 
   <img class="section-image" src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?q=80&w=1400&auto=format&fit=crop" alt="Technology Design">
 
-  <h3>Step 1: Design</h3>
-  <p>A 3D model is created using CAD software.</p>
+  <h3>Step 1</h3>
+  <p>Design the model using CAD software.</p>
 
-  <h3>Step 2: Slicing</h3>
-  <p>The model is sliced into hundreds of thin layers.</p>
+  <h3>Step 2</h3>
+  <p>Slice the model into layers.</p>
 
-  <h3>Step 3: Printing</h3>
-  <p>The printer deposits or hardens material layer by layer.</p>
-
-  <h3>Step 4: Post-Processing</h3>
-  <p>The object may be cleaned, polished, painted, or cured.</p>
-</section>
-
-<section id="types">
-  <h2>Types of 3D Printing</h2>
-
-  <div class="grid">
-    <div class="card">
-      <h3>FDM</h3>
-      <p>Melts plastic filament and deposits it layer by layer.</p>
-    </div>
-
-    <div class="card">
-      <h3>SLA</h3>
-      <p>Uses UV light to harden liquid resin.</p>
-    </div>
-
-    <div class="card">
-      <h3>SLS</h3>
-      <p>Uses lasers to fuse powdered materials.</p>
-    </div>
-
-    <div class="card">
-      <h3>DMLS</h3>
-      <p>Prints metal components using laser technology.</p>
-    </div>
-
-    <div class="card">
-      <h3>Bioprinting</h3>
-      <p>Uses biological materials and living cells.</p>
-    </div>
-  </div>
-</section>
-
-<section id="industries">
-  <h2>Industries and Careers Using 3D Printing</h2>
-
-  <img class="section-image" src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?q=80&w=1400&auto=format&fit=crop" alt="Engineering Industry">
-
-  <h3>Healthcare</h3>
-  <ul>
-    <li>Prosthetic limbs</li>
-    <li>Dental aligners</li>
-    <li>Medical implants</li>
-  </ul>
-
-  <h3>Aerospace</h3>
-  <ul>
-    <li>Rocket parts</li>
-    <li>Aircraft components</li>
-    <li>Lightweight structures</li>
-  </ul>
-
-  <h3>Automotive</h3>
-  <ul>
-    <li>Engine prototypes</li>
-    <li>Custom parts</li>
-    <li>Concept vehicles</li>
-  </ul>
-
-  <h3>Construction</h3>
-  <ul>
-    <li>Printed homes</li>
-    <li>Concrete structures</li>
-  </ul>
-
-  <h3>Careers</h3>
-  <p>
-    Mechanical Engineer, Biomedical Engineer, CAD Designer, Architect, Product Designer, Manufacturing Technician, and Robotics Specialist.
-  </p>
-</section>
-
-<section id="impacts">
-  <h2>Impacts of 3D Printing</h2>
-
-  <h3>Social Impacts</h3>
-  <p>Affordable prosthetics, educational tools, and local manufacturing improve quality of life.</p>
-
-  <h3>Cultural Impacts</h3>
-  <p>Artists and designers can create new forms of creative expression.</p>
-
-  <h3>Economic Impacts</h3>
-  <p>Businesses save money through rapid prototyping and reduced manufacturing costs.</p>
-
-  <h3>Environmental Impacts</h3>
-  <p>3D printing reduces material waste but may still consume large amounts of energy.</p>
-
-  <h3>Ethical Issues</h3>
-  <ul>
-    <li>Illegal printing of dangerous objects</li>
-    <li>Copyright and intellectual property concerns</li>
-    <li>Bioprinting ethics</li>
-  </ul>
-
-  <img class="section-image" src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?q=80&w=1400&auto=format&fit=crop" alt="Technology Future">
-</section>
-
-<section>
-  <h2>Advantages vs Disadvantages</h2>
-
-  <table>
-    <tr>
-      <th>Advantages</th>
-      <th>Disadvantages</th>
-    </tr>
-
-    <tr>
-      <td>Rapid prototyping</td>
-      <td>Slow mass production</td>
-    </tr>
-
-    <tr>
-      <td>Customization</td>
-      <td>Expensive industrial machines</td>
-    </tr>
-
-    <tr>
-      <td>Reduced waste</td>
-      <td>Material limitations</td>
-    </tr>
-
-    <tr>
-      <td>Complex designs</td>
-      <td>Requires technical skills</td>
-    </tr>
-  </table>
+  <h3>Step 3</h3>
+  <p>Print layer by layer.</p>
 </section>
 
 <section id="future">
-  <h2>The Future of 3D Printing</h2>
-
-  <div class="grid">
-    <div class="card">
-      <h3>Printed Organs</h3>
-      <p>Scientists hope to print functional organs for transplants.</p>
-    </div>
-
-    <div class="card">
-      <h3>Space Manufacturing</h3>
-      <p>Future astronauts may print tools and buildings on Mars.</p>
-    </div>
-
-    <div class="card">
-      <h3>Printed Homes</h3>
-      <p>Entire neighborhoods may be built with giant printers.</p>
-    </div>
-
-    <div class="card">
-      <h3>Sustainable Manufacturing</h3>
-      <p>Future systems may use recycled materials and renewable energy.</p>
-    </div>
-  </div>
-</section>
-
-<section>
   <h2>Conclusion</h2>
-  <p>
-    3D printing is transforming the world by changing how products are designed, created, and distributed. From healthcare and aerospace to education and construction, the technology has major benefits for industries and society.
-  </p>
 
   <p>
-    Although challenges such as cost, ethics, and environmental concerns still exist, the future of 3D printing is extremely promising.
+    3D printing is transforming how we design and build objects.
   </p>
+
   <p>
     Learn more about 3D printing here:
     <a href="https://en.wikipedia.org/wiki/3D_printing" target="_blank">
@@ -473,10 +306,8 @@
 </div>
 
 <footer>
-  <p>3D Printing Technology Report Webpage | Created Using HTML & CSS</p>
+  <p>3D Printing Technology Report Webpage</p>
 </footer>
 
 </body>
 </html>
-
-
